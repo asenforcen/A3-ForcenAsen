@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!-- La declaración inicial indica que el documento usa HTML5 y lang="ca" marca el catalán como idioma de la página. -->
+<html lang="ca">
+<head>
+    <!-- UTF-8 permite escribir acentos. El viewport adapta el ancho de la página a la pantalla del dispositivo. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Estos metadatos identifican al autor y describen el contenido. El título aparece en la pestaña del navegador. -->
+    <meta name="author" content="Asen Forcen">
+    <meta name="description" content="Llistat dels arcs argumentals de One Piece, agrupats per saga.">
+    <meta name="keywords" content="One Piece, arcs, anime, manga">
+    <title>Arcs de la sèrie de One Piece | Wiki</title>
+    <link rel="icon" type="image/png" href="img/logo_onepiece.png">
+    <!-- Las tres páginas cargan la misma hoja de estilos para compartir el diseño. -->
+    <link rel="stylesheet" href="css/estils.css">
+</head>
+<body class="pagina-serie">
+    <!-- La cabecera muestra el logotipo del sitio. El atributo alt ofrece una alternativa textual. -->
+    <header>
+        <img src="./img/Site-OnePiece_logo.webp" alt="Logotip de la wiki de One Piece">
+    </header>
+
+    <!-- El menú agrupa los enlaces a las tres páginas en una lista.
+         aria-current indica al lector de pantalla qué enlace corresponde a la página abierta. -->
+    <nav>
+        <ul>
+            <li><a href="serie-historia.html">Història</a></li>
+            <li><a href="serie-personatges.html">Personatges</a></li>
+            <li><a href="serie-llistat-arcs.html" aria-current="page">Arcs de la sèrie</a></li>
+        </ul>
+    </nav>
+
+    <!-- main marca el contenido principal y article reúne el listado con su título e imagen. -->
+    <main class="contenido">
+        <article>
+            <h1>Llistat d'arcs argumentals</h1>
+            <!-- La clase contenido-arcos aplica Flexbox a la imagen y la lista. El título queda fuera.
+                 En pantallas de hasta 970 px, la imagen se coloca encima de la lista. En las demás, queda a su derecha. -->
+            <div class="contenido-arcos">
+                <!-- El id imagen-grande permite aplicar en CSS el tamaño y la posición de esta imagen. -->
+                <img id="imagen-grande" src="./img/one-piece-c0pujiakubq5rwas.jpg" alt="En Ruffy i la tripulació del Barret de Palla">
+                <!-- La lista exterior (ul) contiene un elemento (li) por saga, con el nombre destacado en strong.
+                     La clase imagen-cine cambia la viñeta de cada saga por un icono. Dentro de cada saga,
+                     una lista ordenada (ol) numera sus arcos. -->
+                <ul>
+                    <li class="imagen-cine">
+                        <strong>Saga de l'East Blue</strong>
+                        <ol>
+                            <li>Arc Romance Dawn</li>
+                            <li>Arc Payaso Buggy</li>
+                            <li>Arc d'en Kuro</li>
+                            <li>Arc Restaurant Baratie</li>
+                            <li>Arc Arlong Park</li>
+                            <li>Arc Loguetown</li>
+                            <li>Arc Drac Mil·lenari</li>
+                        </ol>
+                    </li>
+                    <li class="imagen-cine">
+                        <strong>Saga Arabasta</strong>
+                        <ol>
+                            <li>Arc Reverse Mountain</li>
+                            <li>Arc Whiskey Peak</li>
+                            <li>Arc Little Garden</li>
+                            <li>Arc de Drum</li>
+                            <li>Arc d'Arabasta</li>
+                        </ol>
+                    </li>
+                    <li class="imagen-cine">
+                        <strong>Saga Sky Island</strong>
+                        <ol>
+                            <li>Arc illa de les cabres</li>
+                            <li>Arc Ruluka Island</li>
+                            <li>Arc de Jaya</li>
+                            <li>Arc Skypiea</li>
+                            <li>Arc G8</li>
+                        </ol>
+                    </li>
+                    <li class="imagen-cine">
+                        <strong>Saga Water 7</strong>
+                        <ol>
+                            <li>Arc Long Ring Long Land</li>
+                            <li>Arc Ocean's Dream</li>
+                            <li>Arc Foxy's Return</li>
+                            <li>Almirant Aokiji</li>
+                            <li>Arc Water7</li>
+                            <li>Arc Enies Lobby</li>
+                            <li>Arc retorn a Water7</li>
+                        </ol>
+                    </li>
+                    <li class="imagen-cine">
+                        <strong>Saga Thriller Bark</strong>
+                        <ol>
+                            <li>Arc Ice Hunter</li>
+                            <li>Arc Thriller Bark</li>
+                            <li>Arc Spa Island</li>
+                        </ol>
+                    </li>
+                    <li class="imagen-cine">
+                        <strong>Saga Guerra de Marineford</strong>
+                        <ol>
+                            <li>Arc Sabaody</li>
+                            <li>Arc Amazon Lily</li>
+                            <li>Arc Impel Down</li>
+                            <li>Arc Marine Ford</li>
+                            <li>Arc el passat de Ruffy</li>
+                        </ol>
+                    </li>
+                    <li class="imagen-cine">
+                        <strong>Saga Gyojin Island</strong>
+                        <ol>
+                            <li>Arc retorn a Sabaody</li>
+                            <li>Arc Illa Gyojin</li>
+                        </ol>
+                    </li>
+                    <li class="imagen-cine">
+                        <strong>Saga Dressrosa</strong>
+                        <ol>
+                            <li>Arc Ambició de Z</li>
+                            <li>Arc Punk Hazard</li>
+                            <li>Arc Dressrosa</li>
+                        </ol>
+                    </li>
+                    <li class="imagen-cine">
+                        <strong>Saga Whole Cake Island</strong>
+                        <ol>
+                            <li>Arc Silver Mine</li>
+                            <li>Arc de Zou</li>
+                            <li>Arc Whole Cake Island</li>
+                        </ol>
+                    </li>
+                    <li class="imagen-cine">
+                        <strong>Saga País de Wano</strong>
+                        <ol>
+                            <li>Arc del Levely</li>
+                            <li>Arc País de Wano-1</li>
+                            <li>Arc País de Wano-2</li>
+                            <li>Arc el passat de Uta</li>
+                            <li>Arc País de Wano-3</li>
+                        </ol>
+                    </li>
+                    <li class="imagen-cine">
+                        <strong>Saga Final</strong>
+                        <ol>
+                            <li>Arc Egghead</li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <!-- Pie de página con los logotipos de Fandom y One Piece -->
+    <footer>
+        <img src="./img/fandom20-footer-logo.webp" alt="Fandom, 20 anys">
+        <img src="./img/logo_onepiece.png" alt="Logotip de One Piece">
+    </footer>
+</body>
+</html>

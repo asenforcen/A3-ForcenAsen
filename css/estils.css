@@ -1,0 +1,193 @@
+/* Estilos generales */
+/* body fija el fondo y la tipografía de las tres páginas. line-height controla la separación entre líneas. */
+body {
+    background-color: yellow;
+    font-family: "DejaVu Serif", Georgia, serif;
+    font-size: 16px;
+    line-height: 1.25;
+}
+
+/* Color del título principal de cada página. */
+h1 {
+    color: #006d91;
+}
+
+/* Los enlaces son naranjas y se subrayan al pasar el ratón por encima. */
+a {
+    color: orange;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+/* Las imágenes se comportan como bloques para poder centrarlas con márgenes. */
+img {
+    display: block;
+}
+
+/* Los logotipos y la imagen de Història se reducen si les falta espacio. */
+header img, footer img, #one_piece {
+    max-width: 100%;
+}
+
+/* auto reparte el espacio libre entre los dos márgenes laterales. */
+header img, main img {
+    margin: 0 auto;
+}
+
+/* Cabecera, menú, contenido y pie */
+/* Los tres bloques tienen el mismo ancho y se centran. border-box incluye el relleno y los bordes en ese ancho. */
+header, nav, main {
+    box-sizing: border-box;
+    width: 80%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+header, nav {
+    background-color: #656462;
+}
+
+/* El borde claro separa el logotipo del menú. */
+header {
+    padding: 4px;
+    border-bottom: 20px solid #f0f0f0;
+}
+
+/* Flexbox centra los enlaces del menú y los logotipos del pie. flex-wrap permite que pasen a otra fila. */
+nav ul, footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* El menú usa una lista sin viñetas. gap separa las filas 6 px y los elementos de cada fila 32 px. */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    gap: 6px 32px;
+}
+
+/* padding deja espacio entre el contenido y los bordes del bloque. */
+main {
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+footer {
+    background-color: #9955bc;
+    padding: 20px;
+    gap: 24px;
+}
+
+/* Història */
+/* La fecha y los iconos quedan en una fila y se alinean en el centro vertical. */
+.fecha_redes {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+/* Los iconos tienen el mismo tamaño y un margen que los separa del elemento anterior. */
+.fecha_redes img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+/* Las líneas se dibujan con el borde superior. La primera tiene más espacio alrededor. */
+hr {
+    border: 0;
+    border-top: 2px solid #555;
+    margin: 12px 0 8px;
+}
+
+hr:first-of-type {
+    margin: 22px 0 12px;
+}
+
+/* Personatges */
+/* Todas las fotos de personajes tienen las mismas dimensiones. */
+.imagen-personaje {
+    width: 100px;
+    height: 150px;
+}
+
+/* La clase convierte «Saber-ne més …» en un bloque centrado que cabe en su ficha. */
+.enlace-personaje {
+    display: block;
+    width: 230px;
+    max-width: 100%;
+    margin: 14px auto 0;
+    text-align: center;
+    background-color: #656462;
+}
+
+/* Este enlace usa blanco al pasar el ratón por encima para contrastar con el fondo gris. */
+.enlace-personaje:hover {
+    color: white;
+}
+
+/* Arcs de la sèrie */
+/* Cada saga usa un icono como viñeta. ../ sube desde la carpeta css hasta la raíz de la práctica. */
+.imagen-cine {
+    list-style-image: url("../img/icono-cine.png");
+    color: darkcyan;
+}
+
+/* La lista interior vuelve a usar números y texto negro para los arcos. */
+.imagen-cine ol {
+    list-style: decimal;
+    color: black;
+    margin: 6px 0 2px;
+}
+
+/* La imagen aparece primero en el HTML. row-reverse la coloca a la derecha de la lista. */
+.contenido-arcos {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+}
+
+/* Quita el margen exterior de la lista de sagas. */
+.contenido-arcos ul {
+    margin: 0;
+}
+
+/* El ancho depende del contenedor, con límites de 500 y 800 px en la vista de dos columnas. */
+#imagen-grande {
+    width: 60%;
+    min-width: 500px;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* En este tramo, los tres bloques principales pasan del 80 % al 90 % de ancho. */
+@media (min-width: 900px) and (max-width: 1200px) {
+    header, nav, main {
+        width: 90%;
+    }
+
+    /* El 53 % compensa el mayor ancho del contenedor para que la imagen siga reduciéndose al estrechar la ventana. */
+    #imagen-grande {
+        width: 53%;
+    }
+}
+
+/* Hasta 970 px se apilan la imagen y la lista en el orden del HTML. */
+@media (max-width: 970px) {
+    .contenido-arcos {
+        flex-direction: column;
+    }
+
+    /* La imagen ocupa el ancho disponible hasta 500 px y puede reducirse en móviles. */
+    #imagen-grande {
+        width: 100%;
+        min-width: 0;
+        max-width: 500px;
+    }
+}
